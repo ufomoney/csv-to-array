@@ -11,7 +11,7 @@ document.getElementById('btn').addEventListener('click', () => {
       const result = event.target.result.trim().split('\n');
       const newArray = result.map(item => {
         const [wallet, amount] = item.split(',');
-        return { wallet, amount: +amount };
+        return { wallet, amount: amount * 10 ** 18 };
       });
       console.log(newArray);
     };

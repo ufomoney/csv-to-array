@@ -15,7 +15,7 @@ document.getElementById('btn').addEventListener('click', () => {
       const newArray = result.map(item => {
         const [wallet, amount] = item.split(',');
         const newAmount = BigInt(amount * 10 ** 18);
-        div += `<div>{<span>wallet: "${wallet}"</span>, <span>amount: ${newAmount}</span>},</div>`;
+        div += `<div>{<span>wallet: "${wallet}"</span>, <span>amount: "${newAmount}"</span>},</div>`;
         return { wallet, amount: newAmount };
       });
       const elem = div.slice(0, -7) + '</div>';
